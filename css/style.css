@@ -23,10 +23,28 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px dashed black;
 }
 .items{
     width: 700px;
     height: 500px;
     margin: 0 auto;
     position: absolute;
+    border: 5px solid red;
+}
+
+#up-button{
+    position: absolute;
+    top: 200px;
+}
+#down-button{
+    position: absolute;
+    bottom: 200px;
+}
+
+button {
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    background-color: white;
 }

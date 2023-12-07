@@ -11,8 +11,6 @@
 // Adesso rimuoviamo tutto il markup statico e inseriamo tutte le immagini
 // dinamicamente servendoci dell'array fornito e un semplice
 // ciclo for che concatena un template literal.
-
-
 // Tutte le immagini saranno nascoste, tranne la prima, che avrà una
 // classe specifica che la renderà visibile.
 // Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1,
@@ -39,3 +37,72 @@
 
 // 3. Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa
 // domanda: "Quanti cicli servono?"
+
+
+ 
+
+// const myImages = [
+//     'item_one',
+//     'item_two',
+//     'item_three',
+//     'item_four',
+//     'item_five'
+// ];
+
+
+// document.getElementById('container').append(myImages);
+
+
+// const img_two = document.createElement("div");
+// const img_three = document.createElement("div");
+// const img_four = document.createElement("div");
+// const img_five = document.createElement("div");
+
+// const images = [
+//     './img/01.webp',
+//     './img/02.webp',
+//     './img/03.webp',
+//     './img/04.webp',
+//     './img/05.webp'
+// ];
+
+
+const images = [
+    './img/01.webp',
+    './img/02.webp',
+    './img/03.webp',
+    './img/04.webp',
+    './img/05.webp'
+];
+const imagesContainer = document.getElementById('container');
+
+for(let i = 0; i < images.length; i++) {
+
+
+    // const itemDiv = document.createElement('div'); // <div
+    // itemDiv.setAttribute('class', 'items js'); //<div class="items"
+
+    // const image =  document.createElement('img');
+    // image.setAttribute('src', images[i]);
+    // // image.src = images[i];
+
+    // itemDiv.appendChild(image);
+    // imagesContainer.appendChild(itemDiv);
+
+    imagesContainer.innerHTML += `
+        <div class="items">
+            <img src="${images[i]}">
+        </div>
+    `
+}
+
+const button = document.getElementById('up-button');
+button.addEventListener('click', function(){
+    
+    
+}
+);
+// SE viene cliccato aumenta una unità
+// altrimenti niente
+
+// if se aumenta di una unita allora metti d-none a img [i]
