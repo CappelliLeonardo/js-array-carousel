@@ -48,7 +48,7 @@ const buttonLeft = document.getElementById('button-left');
 
 buttonRight.addEventListener('click', function(){
 
-      
+     
     if (counter < imgList.length -1){
 
         counter += 1;
@@ -56,7 +56,12 @@ buttonRight.addEventListener('click', function(){
         console.log(counter);
 
         document.querySelector('.canvas').innerHTML = imgList[counter];
+
+        
+         
     }
+
+    
     
 
 })
@@ -86,5 +91,9 @@ function myFunction (){
     console.log(counter);
 
     document.querySelector('.canvas').innerHTML = imgList[counter];
+
+    if (counter == 5){
+        counter = 0;
+    }
 
 }
