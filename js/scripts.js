@@ -75,4 +75,16 @@ buttonLeft.addEventListener('click', function(){
         }
 
     
-}) 
+});
+
+setInterval (myFunction, 3000);
+
+function myFunction (){
+    
+    counter += 1;
+
+    console.log(counter);
+
+    document.querySelector('.canvas').innerHTML = imgList[counter];
+
+}
